@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOME PAGE</title>
+<link rel="stylesheet" href="Button.css">
+
+<style>
+body {
+    margin: 0;
+    background: url(Palawan.jpg) no-repeat center top;
+    background-size: 1400px 550px;
+    background-attachment: fixed;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #547792;
+    font-family: "Aeogo Pxltd Next";
+    border: 5px groove #EAE0CF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+.logoname {
+    margin-right: auto;
+    font-family: "Berlin Sans FB";
+    font-size: 20px;
+    color: white;
+    padding: 14px 16px;
+}
+li {
+    list-style: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #213448;
+    color: white;
+}
+
+.active {
+    background-color: #213448;
+    color: white;
+}
+.dess {
+    text-align: center;
+    font-size: 120px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    margin: 150px 0;
+	text-shadow: 3px 2px black;
+}
+.section {
+    background-color: #94B4C1;
+    padding: 30px;
+}
+.designT {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: white;
+    margin: 15px;
+	text-shadow: 3px 2px black;
+}
+.content {
+    overflow: hidden;
+}
+.content img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    float: right;
+    margin: 50px;
+	margin-right: 70px;
+	box-shadow: 0 5px 10px 10px white;	
+}
+.gallery {
+    background-color: #547792;
+    padding: 40px;
+    text-align: center;
+}
+.gallery-item {
+    display: inline-block;
+    margin: 20px;
+	color: white;
+	text-shadow: 3px 2px black;
+}
+.gallery img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;	
+	box-shadow: 0 5px 10px 10px white;
+}
+.gallery img:hover {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+	-webkit-transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+    opacity: 1.0;
+    filter: alpha(opacity=100);	
+}
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   
+				-webkit-transition-duration: 0.4s; 
+				transition-duration: 0.4s;	
+            }
+</style>
+</head>
+
+<body>
+<h1 class="dess">PALAWAN</h1>
+<ul>
+    <li class="logoname"><b>PALAWAN BLOG</b></li>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+</ul>
+<div class="section">
+    <div class="content">
+        <img class="clickable" src="Palawan1.jpg">
+        <p class="designT">ABOUT PALAWAN</p>
+
+        <p style="font-size: 20px; text-align: justify;">
+	  Palawan Island is one of the most breathtaking destinations in the Philippines and has earned its title as the country’s “Last Frontier.” Located in Western Philippines, this long, narrow island is world-famous for its unspoiled beaches, dramatic limestone cliffs, turquoise lagoons, and diverse marine life. Whether you’re into snorkeling, diving, island hopping, or nature adventures, Palawan Island tours offer an incredible variety of experiences.
+	<br>
+	<br>
+	From the bustling city of Puerto Princesa to the tropical charm of El Nido town, the historic shipwrecks of Coron town, the serene coastlines of San Vicente town, and the untouched shores of Balabac Island, Palawan showcases some of the best attractions that the Philippines has to offer.
+    </p>
+    </p>
+    </div>
+</div>
+<div class="gallery">
+    <p class="designT">12 BEAUTIFUL PLACES IN PALAWAN (Must Visit)</p>
+
+    <div class="gallery-item">
+		<img class="clickable"src="im1.jpg"></a>
+        <p>Puerto Princesa Subterranean River National Park</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im2.jpg"></a>
+        <p>Big Lagoon (El Nido)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im3.jpg"></a>
+        <p>Small Lagoon (El Nido)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im4.jpg"><a>
+        <p>Coron Bay Wrecks</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im5.jpg"></a>
+        <p>Kayangan Lake (Coron)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable" src="im6.jpg"></a>
+        <p>Nacpan Beach (El Nido)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im7.jpg">
+        <p>Hidden Beach (El Nido)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable" src="im8.jpg">
+        <p>Tubbataha Reefs Natural Park</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im9.jpg"></a>
+        <p>Honda Bay (Puerto Princesa)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im10.jpg"></a>
+        <p>Tabon Caves</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im11.jpg">
+        <p>Duli Beach (El Nido)</p>
+    </div>
+
+    <div class="gallery-item">
+        <img class="clickable"src="im12.jpg">
+        <p>Nagtabon Beach</p>
+    </div>
+
+    <p style="font-size: 25px; color: white; text-shadow: 3px 2px black;">
+    Explore the beauty of Palawan by clicking below!
+    </p>
+<a href = "destination.html">
+    <button class="button">Explore More!</button></a>
+</div>
+	<div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>
