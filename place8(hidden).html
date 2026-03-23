@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hidden Beach Page</title>
+<style>
+body {
+    margin: 0;
+    background: url('secret_beach.jpg') no-repeat center top;
+    background-size: 1600px 420px;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #547792;
+    font-family: "Aeogo Pxltd Next";
+    border: 5px groove #EAE0CF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+.logoname {
+    margin-right: auto;
+    font-family: "Berlin Sans FB";
+    font-size: 20px;
+    color: white;
+    padding: 14px 16px;
+}
+li { list-style: none; }
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #213448;
+    color: white;
+}
+.active {
+    background-color: #213448;
+    color: white;
+}
+
+.dess {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    margin: 150px 0;
+    box-shadow: 5px 5px 5px 5px white;
+    text-shadow: 3px 2px black;
+}
+
+.section {
+    background-color: #94B4C1;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.section.center {
+    flex-direction: column;
+    text-align: center;
+}
+.section img {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 10px white;
+}
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+.text-content p {
+    font-size: 28px;
+    text-align: justify;
+}
+
+.designT {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: white;
+    margin: 15px 0;
+    text-shadow: 3px 2px black;
+}
+.conclusion {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: blaclk;
+    margin: 15px;
+	text-shadow: 3px 2px white;
+}
+.gallery {
+    background-color: #547792;
+    padding: 30px;
+    text-align: center;
+}
+.gallery img {
+    width: 300px;
+    height: 230px;
+    border-radius: 10%;
+    margin: 20px;
+    box-shadow: 0 5px 10px 10px red;    
+}
+
+.nearby {
+    background-color: #213448;
+    padding: 60px 10%;
+    font-family: "Berlin Sans FB";
+    color: #EAE0CF;
+}
+
+.nearby-title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 3px 2px black;
+}
+
+.nearby-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.nearby-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.nearby-item img {
+    width: 380px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+}
+
+.nearby-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nearby-text h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.nearby-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   	
+            }
+</style>
+</head>
+
+<body>
+<h1 class="dess">Hidden Beach <br>El Nido</h1>
+
+<ul>
+    <li class="logoname"><b>PALAWAN TRAVEL BLOG</b></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+    <li><a class="active">Hidden Beach</a></li>
+</ul>
+
+<div class="section">
+    <div class="text-content">
+        <p class="designT">ABOUT HIDDEN BEACH</p>
+        <p>
+        Hidden Beach is a breathtaking secret cove tucked away on Matinloc Island in El Nido's Bacuit Bay. Completely invisible from the open water, the only way in is through a narrow crevice in the towering limestone cliffs — making it one of the most exciting and secluded beach discoveries in all of Palawan.
+        <br><br>
+        Inside, a small stretch of pristine white sand and crystal-clear shallow waters awaits. With dramatic limestone walls rising all around and lush greenery above, it feels like stepping into a hidden paradise that few get to experience.
+        </p>
+    </div>
+    <img class="clickable" src="secret_beach.jpg" alt="Hidden Beach El Nido">
+</div>
+
+<div class="gallery">
+    <p class="designT" style="float: left;">KEY TAKEAWAYS:</p><br><br><br><br>
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;">
+    -- Hidden Beach is a completely secluded secret cove on Matinloc Island in El Nido, accessible only by swimming through a narrow crevice in the limestone cliffs.
+    <br><br>
+    -- The beach features pristine white sand, crystal-clear shallow waters, and dramatic limestone walls enclosing the cove on all sides.
+    <br><br>
+    -- It is a highlight of El Nido's Tour C island-hopping package, which departs from El Nido town with guided tours and life jackets provided.
+    <br><br>
+    -- Best visited during the dry season from October to May, with early morning visits recommended to avoid crowds from other tour boats.
+    <br><br>
+    -- Snorkeling, swimming, and photography inside the cove are among the most popular and rewarding activities at Hidden Beach.
+    <br><br>
+    -- The beach is small and fragile — visitors are encouraged to respect the environment and avoid disturbing the surrounding marine life and coral.
+    </p>
+</div>
+
+<div style="background-color: #213448; padding: 30px;">
+<div class="sec" style="overflow: hidden;">
+    <img class="clickable" src="nacpan_activities.jpg" style="width:300px; height:230px; border-radius:10%; float:right; margin:20px 70px 20px 20px; margin-top:100px; box-shadow:0 5px 10px rgba(255,255,255,0.5);">
+    <p style="font-family:'Berlin Sans FB'; font-size:40px; color:white; margin-right:100px; margin-top:50px; text-shadow:3px 2px black;">Why Visit Hidden Beach?</p>
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;">
+    Hidden Beach offers one of the most unique and exhilarating travel experiences in all of Southeast Asia. There is simply no other place quite like it — a fully enclosed secret cove invisible from the outside world, accessible only through a dramatic swim through towering limestone rocks.
+    <br><br>
+    Whether you are an adventure seeker, a nature lover, or a photographer searching for the perfect shot, Hidden Beach delivers an unforgettable sense of discovery. The calm turquoise waters inside the cove, the soaring cliffs above, and the sheer privacy of the location make it one of the most magical spots in El Nido.
+    </p>
+</div>
+</div>
+
+<div class="gallery">
+    <p class="designT" style="float: left; text-shadow: 3px 2px black;">Hidden Beach Tips</p><br><br><br><br>
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;">
+    Make your visit to Hidden Beach safe and memorable with these tips:
+    <br><br>
+    <b>1. Book Tour C:</b> Hidden Beach is only accessible via El Nido's Tour C island-hopping package — book in advance especially during peak season.
+    <br><br>
+    <b>2. Arrive Early:</b> The cove is small, so getting there early gives you the best chance of having it to yourself before other boats arrive.
+    <br><br>
+    <b>3. Swim Confidently:</b> You need to swim through the crevice to enter — basic swimming ability is required. Life jackets are provided by guides.
+    <br><br>
+    <b>4. Bring a Waterproof Camera:</b> The views inside the cove are spectacular — a waterproof camera or housing is essential to capture the experience.
+    <br><br>
+    <b>5. Respect the Environment:</b> Avoid touching the coral or rock formations and do not leave any trash — Hidden Beach's beauty depends on every visitor's care.
+    <br><br>
+    <b>6. Best Season:</b> Visit between October and May for the calmest waters and best visibility inside the cove.
+    </p>
+</div>
+
+<div class="section" style="background-color:#547792; justify-content: flex-start;">
+    <div class="text-content" style="text-align: left; max-width: 1400px;">
+        <p class="designT">WHAT TO EXPECT</p>
+        <p style="font-size: 20px; color:#EAE0CF; line-height: 1.6;">
+        -- <strong>A secret cove accessible only through a small crevice in the limestone cliffs.</strong><br>
+        The entrance to Hidden Beach is a narrow gap between two massive rock walls — you'll need to swim through it, guided by your tour guide, to reveal the stunning beach inside.<br><br>
+
+        -- <strong>Pristine white sand and impossibly clear shallow water.</strong><br>
+        Once inside, the beach greets you with soft white sand and calm, crystal-clear water that's perfect for swimming and wading, with colorful fish and coral visible beneath the surface.<br><br>
+
+        -- <strong>A dramatic natural amphitheater of towering limestone walls.</strong><br>
+        The cove is completely enclosed by soaring limestone cliffs adorned with tropical vegetation, creating a surreal and awe-inspiring atmosphere unlike anywhere else in the Philippines.<br><br>
+
+        -- <strong>Part of El Nido's famous Tour C island-hopping package.</strong><br>
+        Hidden Beach is a highlight of Tour C, which visits some of El Nido's most remote and spectacular spots. Guided tours depart from El Nido town, with life jackets provided for the swim-through entrance.<br><br>
+
+        -- <strong>Best visited early to avoid crowds during peak season.</strong><br>
+        The beach is small by nature, so arriving early — especially from March to May — gives you the best chance of experiencing it peacefully before other tour boats arrive.
+        </p>
+    </div>
+</div>
+
+<div class="nearby">
+    <h2 class="nearby-title">Nearby Attractions</h2>
+
+    <div class="nearby-item">
+        <img class="clickable" src="big lagoon.jpg">
+        <div class="nearby-text">
+            <h3>1. Big Lagoon</h3>
+            <p>One of El Nido's most iconic destinations featuring towering limestone walls enclosing emerald green waters, perfect for kayaking and swimming.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable" src="small lagoon.jpg">
+        <div class="nearby-text">
+            <h3>2. Small Lagoon</h3>
+            <p>A calm and shallow lagoon ideal for kayaking through narrow passages between dramatic rock formations and crystal-clear turquoise waters.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable" src="Matinloc-Shrine-1.jpg">
+        <div class="nearby-text">
+            <h3>3. Matinloc Shrine</h3>
+            <p>Located on the same island as Hidden Beach, this hilltop shrine offers breathtaking panoramic views of Bacuit Bay and the surrounding limestone islands.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable" src="Helicopter-Island.jpg">
+        <div class="nearby-text">
+            <h3>4. Helicopter Island</h3>
+            <p>A uniquely shaped beach resembling a helicopter from above, offering excellent snorkeling, powdery white sand, and stunning views of nearby limestone cliffs.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable" src="cadlao-lagoon.jpg">
+        <div class="nearby-text">
+            <h3>5. Cadlao Lagoon</h3>
+            <p>A peaceful lagoon on Cadlao Island with crystal clear water and lush surroundings, perfect for a quiet escape and leisurely kayaking.</p>
+        </div>
+    </div>
+</div>
+
+<div class="gallery">
+    <p class="designT" style = "float: left;">LOCATION OF HIDDEN BEACH(EL NIDO):</p><br><br><br><br>
+	<p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;"
+	>-- Hidden Beach is located in Bacuit Bay, off the coast of El Nido. It is tucked behind towering limestone cliffs on Matinloc Island, making it one of the more secluded and scenic spots in the area.
+	<br><br>
+	-- The beach is not immediately visible from the open sea and can only be reached by swimming or kayaking through a narrow opening between rocks. Surrounded by dramatic cliffs and clear turquoise waters, Hidden Beach offers a peaceful and unique escape, making it a highlight of island-hopping tours in El Nido.</div></div>
+	
+<div style="background-color: #EAE0CF; padding: 30px;">
+	<p class="conclusion">CONCLUSION</p>
+	<p style="font-size: 20px; text-align: justify; margin: 20px 150px; color:black; line-height: 1.5;">
+   Tubbataha Reefs Natural Park, located in the remote Sulu Sea east of Palawan, stands as the crown jewel of Philippine diving and one of the most extraordinary marine sanctuaries on Earth. As a UNESCO World Heritage Site covering nearly 100,000 hectares, it shelters an astounding diversity of marine life, over 700 fish species, 360 coral species, sharks, manta rays, whale sharks, and hawksbill sea turtles, all thriving in one of the healthiest and least-exploited reef systems in the world. Accessible exclusively by liveaboard boat from March to June, its remoteness is precisely what makes it so pristine and so special. Divers who make the journey to Tubbataha are rewarded with dramatic coral walls, current-swept channels teeming with pelagic life, and the rare privilege of exploring an underwater wilderness largely untouched by human impact. Every dive is a reminder of what the ocean looks like at its most undisturbed, vibrant, abundant, and awe-inspiring in every direction.
+<br><br>
+Beyond the reefs themselves, Palawan offers a rich collection of nearby destinations that complement the Tubbataha experience. Kayangan Lake and Barracuda Lake in Coron provide stunning freshwater diving and kayaking, while Coral Gardens and Malcapuya Island offer snorkeling and beach relaxation in picture-perfect tropical settings. Together, Tubbataha Reefs Natural Park and the surrounding Palawan destinations form an unmatched destination for divers, nature lovers, and conservationists alike, a place where the ocean's full magnificence can still be witnessed in its most natural and magnificent form.</div>
+	<div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>

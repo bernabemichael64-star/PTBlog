@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tubbataha Reefs Natural Park Page</title>
+<style>
+body {
+    margin: 0;
+    background: url(coron_reef.webp) no-repeat center top;
+    background-size: 1700px 450px;
+    background-attachment: fixed;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #547792;
+    font-family: "Aeogo Pxltd Next";
+    border: 5px groove #EAE0CF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+.logoname {
+    margin-right: auto;
+    font-family: "Berlin Sans FB";
+    font-size: 20px;
+    color: white;
+    padding: 14px 16px;
+}
+li {
+    list-style: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #213448;
+    color: white;
+}
+
+.active {
+    background-color: #213448;
+    color: white;
+}
+.dess {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    margin: 150px 0;
+    box-shadow: 5px 5px 5px 5px white;
+    text-shadow: 3px 2px black;
+}
+.section {
+    background-color: #94B4C1;
+    padding: 30px;
+}
+.designT {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: white;
+    margin: 15px;
+    text-shadow: 3px 2px black;
+}
+.conclusion {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: blaclk;
+    margin: 15px;
+	text-shadow: 3px 2px white;
+}
+.act {
+    font-family: "Berlin Sans FB";
+    font-size: 30px;
+    color: white;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+.content {
+    overflow: hidden;
+}
+.content img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    float: right;
+    margin: 50px;
+    margin-top: 90px;
+    margin-right: 70px;
+    box-shadow: 0 5px 10px 10px white;    
+}
+.sec {
+    overflow: hidden;
+}
+
+.sec img {
+    width: 300px;
+    height: 230px;
+    border-radius: 10%;
+    float: right;
+    margin: 20px 70px 20px 20px; 
+    margin-top: 100px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+.gallery {
+    background-color: #547792;
+    padding: 30px;
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 230px;
+    border-radius: 10%;
+    float: right;
+    margin: 20px 70px 20px 20px; 
+    box-shadow: 0 5px 10px 10px red;    
+}
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   	
+            }
+</style>
+</head>
+
+<body>
+<h1 class="dess">Tubbataha Reefs Natural Park <br>
+Top Diving Spot</h1>
+<ul>
+    <li class="logoname"><b>PALAWAN DIVING BLOG</b></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+    <li><a class="active">Tubbataha</a></li>
+</ul>
+<div class="section">
+    <div class="content">
+        <img class="clickable" src="siete_pecados.webp">
+        <p class="designT">ABOUT TUBBATAHA REEFS NATURAL PARK</p>
+
+        <p style="font-size: 30px; text-align: justify; margin-left: 15px;">
+    Tubbataha Reefs Natural Park, located in the middle of the Sulu Sea east of Palawan, is the Philippines' premier marine sanctuary and a UNESCO World Heritage Site. Covering nearly 100,000 hectares across two atolls and the Jessie Beazley Reef, it is one of the most biodiverse underwater ecosystems in the world.<br><br>
+    Home to over 700 species of fish, 360 species of coral, 11 species of sharks, manta rays, whale sharks, hawksbill turtles, and massive schools of pelagic fish, Tubbataha is considered the crown jewel of Philippine diving. Accessible only by liveaboard boat and open just from March to June each year, it remains one of the healthiest and least-exploited reef systems on Earth.
+        </p>
+    </div>
+</div>
+<div class="gallery">
+    <p class="designT" style = "float: left;">KEY TAKEAWAYS:</p><br><br><br><br>
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;"
+    >-- Tubbataha Reefs Natural Park is a UNESCO World Heritage Site and one of the Philippines' oldest and most protected ecosystems, located in the remote Sulu Sea.
+    <br><br>
+    -- The park covers nearly 100,000 hectares and supports over 700 fish species, 360 coral species, and 11 species of sharks, making it one of the most biodiverse reefs in the world.
+    <br><br>
+    -- Diving is only possible from March to June each year due to weather conditions, with access exclusively via liveaboard boats departing from Puerto Princesa.
+    <br><br>
+    -- Divers can expect dramatic coral walls dropping over 100 meters, pristine lagoons, and encounters with whale sharks, manta rays, hammerhead sharks, and hawksbill sea turtles.
+    <br><br>
+    -- The park is strictly protected by armed rangers 24 hours a day — no fishing, collection of marine life, or unauthorized entry is permitted.
+    <br><br>
+    -- Tubbataha is widely regarded as the number one diving destination in the Philippines and one of the top dive spots in the entire world.
+    </p>
+</div>
+<div style="background-color: #213448; padding: 30px;">
+<div class="sec">
+        <img class="clickable" src="skeleton_wreck.webp">
+        <p class="act" style = "font-size: 40px; text-shadow: 3px 2px black;">Why Dive in Tubbataha Reefs?</p>
+    
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;">
+    Tubbataha Reefs offers one of the most extraordinary diving experiences on the planet — a remote, untouched wilderness beneath the sea. Every dive reveals pristine coral gardens, dramatic walls plunging into the deep blue, and an overwhelming abundance of marine life at every turn.
+    <br><br>
+    Whether you're drifting past giant schools of barracuda and jackfish, watching reef sharks patrol the coral walls, or encountering a whale shark in open water, Tubbataha delivers the kind of underwater encounters that stay with you for a lifetime. Its remoteness is its greatest gift — fewer boats, fewer divers, and nature at its most undisturbed.
+    </p></div>
+</div>
+<div class="gallery">
+    <p class="designT" style = "float: left; font-size: 45px;">What to Expect on a Tubbataha Liveaboard</p><br><br><br><br>
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;">
+    A liveaboard trip to Tubbataha typically spans 5 to 7 days, with multiple dives per day across the North Atoll, South Atoll, and Jessie Beazley Reef. Dive sites range from shallow coral gardens and lagoons to deep walls and current-swept channels teeming with pelagic life.
+    <br><br>
+    Boats depart from Puerto Princesa and cruise overnight to reach the park. Onboard, divers are housed in comfortable staterooms with full board included. Dive guides are experienced and knowledgeable about the reef's best sites and marine life.
+    <br><br>
+    Topside, the remote setting offers breathtaking ocean scenery, seabird colonies, and the rare chance to visit the ranger station on the North Islet.
+    </p>
+    <p class="designT" style = "float: left; text-shadow: 3px 2px black;">Tubbataha Diving Tips</p><br><br><br><br>
+    <p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;">
+    Make your Tubbataha liveaboard safe and unforgettable with these tips:
+    <br><br>
+    <b>1. Certification:</b> Advanced Open Water or higher is strongly recommended due to deep walls and strong currents at many sites.
+    <br><br>
+    <b>2. Book Early:</b> Liveaboard spots fill up months in advance — plan and book as early as possible for the March to June season.
+    <br><br>
+    <b>3. Gear:</b> Bring a wetsuit (3mm–5mm), dive computer, and underwater camera — Tubbataha is a photographer's dream.
+    <br><br>
+    <b>4. Currents:</b> Some dive sites have strong currents; always follow your dive guide's instructions and stay within your limits.
+    <br><br>
+    <b>5. Conservation:</b> Never touch the coral, collect anything, or disturb marine life — the park's pristine condition depends on every diver's respect.
+    <br><br>
+    <b>6. Entry Fee:</b> A park entry fee is required for all visitors — this directly funds ranger operations and reef conservation.
+    </p>
+</div>
+<div style="background-color: #213448; padding: 30px;">
+<p class="designT">Nearby Activities and Attractions</p>
+<p style="font-size: 20px; text-align: justify; margin: 20px 150px; color:#EAE0CF; line-height: 1.5;">
+While Tubbataha Reefs is primarily a world-class diving destination, there are other incredible experiences to enjoy in and around Palawan before or after your liveaboard adventure.
+</p>
+<div class="sec" style="overflow:hidden; margin-bottom: 30px;">
+    <img class="clickable" src="kayangan_lake.webp">
+    <p class="act">1. Kayangan Lake</p>
+    <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+    One of the cleanest lakes in the Philippines, surrounded by dramatic limestone cliffs in Coron — ideal for swimming, kayaking, and hiking to scenic viewpoints.
+    </p>
+</div>
+<div class="sec" style="overflow:hidden; margin-bottom: 30px;">
+    <img class="clickable" src="barracuda_lake.jfif">
+    <p class="act">2. Barracuda Lake</p>
+    <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+    A unique thermocline lake in Coron where freshwater and saltwater layers meet, famous for its striking underwater rock formations and exceptional diving.
+    </p>
+</div>
+<div class="sec" style="overflow:hidden; margin-bottom: 30px;">
+    <img class="clickable" src="coral_gardens.webp">
+    <p class="act">3. Coral Gardens</p>
+    <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+    Snorkel above vibrant coral gardens teeming with colorful reef fish near Coron — a perfect add-on to any diving or island-hopping day trip.
+    </p>
+</div>
+<div class="sec" style="overflow:hidden; margin-bottom: 30px;">
+    <img class="clickable" src="malcapuya_island.jpg">
+    <p class="act">4. Malcapuya Island</p>
+    <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+    A pristine white sand island near Coron ideal for snorkeling, swimming, and relaxing on a secluded tropical beach away from the crowds.
+    </p>
+</div>
+</div>
+<div class="gallery">
+    <p class="designT" style = "float: left;">LOCATION OF TUBBATAHA REEFS NATURAL PARK:</p><br><br><br><br>
+	<p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;"
+	>-- Tubbataha Reefs Natural Park is located in the middle of the Sulu Sea, about 150 kilometers southeast of Puerto Princesa City. It is part of Palawan and can only be accessed by liveaboard boats, usually during the diving season from March to June.
+<br><br>
+-- This marine park is a protected area and a UNESCO World Heritage Site, known for its rich biodiversity and pristine coral reefs. It is home to a wide variety of marine species, including sharks, sea turtles, and colorful reef fish, making it one of the best diving destinations in the world.</div></div>
+
+<div style="background-color: #EAE0CF; padding: 30px;">
+	<p class="conclusion">CONCLUSION</p>
+	<p style="font-size: 20px; text-align: justify; margin: 20px 150px; color:black; line-height: 1.5;">
+    Hidden Beach, located on Matinloc Island in El Nido, Palawan, is one of the most extraordinary and secluded destinations in the Philippines. Accessible only through a narrow crevice in towering limestone cliffs, this secret cove rewards adventurous visitors with pristine white sand, crystal-clear shallow waters, and a dramatic natural amphitheater unlike anywhere else in the world. The sheer sense of discovery, swimming through the rock passage to reveal the hidden paradise inside, makes it an unforgettable experience for every traveler who finds it. Activities at Hidden Beach include snorkeling in the calm turquoise waters, exploring the surrounding limestone formations, and capturing stunning photography inside the enclosed cove. As part of El Nido's Tour C island-hopping package, it is best visited early in the day to enjoy the peaceful atmosphere before other boats arrive, particularly during the peak season from March to May. Beyond Hidden Beach itself, the surrounding El Nido area offers a wealth of equally breathtaking destinations.
+<br><br>
+Nearby attractions such as Nacpan Beach, Shimizu Island, Las Cabanas Beach, and the 4 Islands Tour provide visitors with pristine coastlines, vibrant coral reefs, thrilling water activities, and unforgettable sunset views. Together, Hidden Beach and its surrounding attractions make El Nido one of the most complete and spectacular travel destinations in all of Southeast Asia, a perfect blend of adventure, natural beauty, and peaceful escape for every type of traveler.</p>
+	</div>
+	<div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>

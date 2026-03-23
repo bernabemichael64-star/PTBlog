@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nacpan Beach Page</title>
+<style>
+body {
+    margin: 0;
+    background: url('nacpanbackground.jpg') no-repeat center top;
+    background-size: 1600px 420px;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #547792;
+    font-family: "Aeogo Pxltd Next";
+    border: 5px groove #EAE0CF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+.logoname {
+    margin-right: auto;
+    font-family: "Berlin Sans FB";
+    font-size: 20px;
+    color: white;
+    padding: 14px 16px;
+}
+li { list-style: none; }
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #213448;
+    color: white;
+}
+.active {
+    background-color: #213448;
+    color: white;
+}
+
+.dess {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    margin: 150px 0;
+    box-shadow: 5px 5px 5px 5px white;
+    text-shadow: 3px 2px black;
+}
+
+.section {
+    background-color: #94B4C1;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.section.center {
+    flex-direction: column;
+    text-align: center;
+}
+.section img {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 10px white;
+}
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+.text-content p {
+    font-size: 28px;
+    text-align: justify;
+}
+
+.designT {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: white;
+    margin: 15px 0;
+    text-shadow: 3px 2px black;
+}
+.conclusion {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: blaclk;
+    margin: 15px;
+	text-shadow: 3px 2px white;
+}
+.gallery {
+    background-color: #547792;
+    padding: 30px;
+    text-align: center;
+}
+.gallery img {
+    width: 300px;
+    height: 230px;
+    border-radius: 10%;
+    margin: 20px;
+    box-shadow: 0 5px 10px 10px red;    
+}
+
+.nearby {
+    background-color: #213448;
+    padding: 60px 10%;
+    font-family: "Berlin Sans FB";
+    color: #EAE0CF;
+}
+
+.nearby-title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 3px 2px black;
+}
+
+.nearby-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.nearby-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.nearby-item img {
+    width: 380px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+}
+
+.nearby-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.nearby-text h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.nearby-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   	
+            }
+</style>
+</head>
+
+<body>
+<h1 class="dess">Nacpan Beach <br>El Nido</h1>
+
+<ul>
+    <li class="logoname"><b>PALAWAN TRAVEL BLOG</b></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+    <li><a class="active">Nacpan Beach</a></li>
+</ul>
+
+<div class="section">
+    <div class="text-content">
+        <p class="designT">ABOUT NACPAN BEACH</p>
+        <p>
+    Nacpan Beach is a serene 4-kilometer stretch of powdery white sand and clear turquoise waters in El Nido. Perfect for swimming, sunbathing, and long beach walks, it offers a peaceful escape with stunning views of coconut groves and nearby islands. The beach is far enough from the crowds to maintain its untouched charm, making it ideal for visitors looking for tranquility. 
+    <br><br>
+    Renowned for its tranquil atmosphere and natural beauty, Nacpan Beach is a must-visit destination for travelers seeking relaxation, picturesque scenery, and unforgettable sunsets. Whether you are lounging under the shade of palm trees or enjoying the peaceful sounds of the ocean, this beach provides the perfect setting for a day of unwinding and connecting with nature.
+</p>
+    </div>
+    <img class="clickable"src="nacpanbeach.jpg" alt="Nacpan Beach">
+</div>
+
+<div class="section">
+    <img class="clickable" src="nacactivities.jpg" alt="Activities at Nacpan Beach">
+    <div class="text-content">
+        <p class="designT">ACTIVITIES</p>
+        <p>
+    Relax on soft sands, swim in the turquoise waters, or stroll along the long shoreline. Kayaking, paddleboarding, beach photography, and enjoying sunsets are some of the highlights for visitors seeking both relaxation and adventure. The calm, clear waters also offer excellent conditions for snorkeling, where you can explore the vibrant underwater world just offshore. Whether you’re looking to unwind or stay active, this beach offers something for everyone, making it a perfect all-round destination.
+</p>
+    </div>
+</div>
+
+<div class="section" style="background-color:#547792; justify-content: flex-start;">
+    <div class="text-content" style="text-align: left; max-width: 1400px;">
+        <p class="designT">WHAT TO EXPECT</p>
+        <p style="font-size: 20px; color:#EAE0CF; line-height: 1.6;">
+        -- <strong>Pristine white sand perfect for sunbathing and walking.</strong><br>
+        Nacpan Beach offers a long stretch of soft, powdery white sand that’s ideal for leisurely strolls along the shoreline or lounging under the sun while enjoying the gentle sea breeze.<br><br>
+
+        -- <strong>Clear turquoise waters ideal for swimming and water activities.</strong><br>
+        The calm, crystal-clear waters are perfect for swimming, wading, or snorkeling, allowing you to admire small fish and the vibrant underwater life near the shore.<br><br>
+
+        -- <strong>Peaceful and serene environment, away from crowded tourist spots.</strong><br>
+        Unlike busier beaches, Nacpan provides a tranquil atmosphere where visitors can relax, meditate, or enjoy quiet moments surrounded by nature and the soothing sounds of the waves.<br><br>
+
+        -- <strong>Stunning sunsets over the horizon.</strong><br>
+        As the sun dips below the horizon, the sky transforms into a brilliant palette of oranges, pinks, and purples, creating an unforgettable scene perfect for photography or simply soaking in the view.<br><br>
+
+        -- <strong>Coconut groves and nearby small islands for picturesque views.</strong><br>
+        The beach is framed by swaying coconut trees and dotted with small islands in the distance, offering a scenic backdrop that enhances the natural beauty and makes it an ideal spot for relaxation or exploration.
+        </p>
+    </div>
+</div>
+
+<div class="nearby">
+    <h2 class="nearby-title">Nearby Attractions</h2>
+
+    <div class="nearby-item">
+        <img class="clickable" src="4i.webp">
+        <div class="nearby-text">
+            <h3>1. 4 Islands Tour</h3>
+            <p>Discover nearby islands with stunning beaches, snorkeling spots, and unique rock formations, perfect for a day trip from Nacpan Beach. The tour typically includes stops at some of the most picturesque and unspoiled islands, where you can enjoy swimming, sunbathing, and exploring hidden coves.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable" src="lascabanas.jpg">
+        <div class="nearby-text">
+            <h3>2. Las Cabanas Beach</h3>
+            <p>Relax at this nearby beach known for its golden sands, great sunset views, and zipline adventure over the water. It's a popular spot for both families and thrill-seekers, offering a mix of relaxation and adventure with its stunning beach and exciting zipline experience.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable"src="secret.jpg">
+        <div class="nearby-text">
+            <h3>3. Secret Beach</h3>
+            <p>Explore this hidden gem accessible by small boat or kayaking, with stunning limestone cliffs and secluded sandbars. The tranquil and untouched nature of this beach makes it a perfect escape for those seeking a private and peaceful beach experience.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable"src="shimizu.jpg">
+        <div class="nearby-text">
+            <h3>4. Shimizu Island</h3>
+            <p>Snorkel among vibrant coral reefs and colorful marine life, just a short boat ride from Nacpan Beach. Known for its crystal-clear waters, Shimizu Island offers an excellent opportunity to explore the underwater world, with schools of tropical fish and rich coral gardens.</p>
+        </div>
+    </div>
+
+    <div class="nearby-item">
+        <img class="clickable"src="calitang.webp">
+        <div class="nearby-text">
+            <h3>5. Calitang Beach</h3>
+            <p>Enjoy another stretch of serene coastline with soft sands and calm waters, ideal for swimming and picnicking. This less crowded beach is perfect for a peaceful day out, offering visitors the chance to relax, take in the views, or enjoy a casual day by the water.</p>
+        </div>
+    </div>
+</div>
+<div class="gallery">
+    <p class="designT" style = "float: left;">LOCATION OF NAPCAN BEACH(EL NIDO):</p><br><br><br><br>
+	<p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;"
+	>-- Nacpan Beach is located in the northern part of El Nido, about 16–18 kilometers from the town center. It sits along the western coast of mainland Palawan and is easily accessible by tricycle, motorcycle, or van, making it a popular beach destination for visitors.
+	<br><br>
+	-- Nacpan Beach is known for its long stretch of golden sand, clear blue waters, and relaxed atmosphere. It is also part of the famous Twin Beach area, near Calitang Beach, where visitors can enjoy swimming, sunbathing, and watching beautiful sunsets away from the crowds.</div>
+<div style="background-color: #EAE0CF; padding: 30px;">
+	<p class="conclusion">CONCLUSION</p>
+	<p style="font-size: 20px; text-align: justify; margin: 20px 150px; color:black; line-height: 1.5;">
+       Nacpan Beach, located in El Nido, is a serene and picturesque destination featuring a 4-kilometer stretch of soft white sand and crystal-clear turquoise waters. Known for its peaceful atmosphere, this beach offers a perfect escape for relaxation and adventure. Visitors can enjoy activities such as swimming, sunbathing, long beach walks, kayaking, paddleboarding, and photography, with stunning views of coconut groves and nearby islands.
+		<br>
+		<br>
+		In addition to the beach's natural beauty, Nacpan Beach is known for its incredible sunsets and calm, uncrowded environment, making it ideal for those seeking tranquility. The beach's charm is further enhanced by the coconut groves and small islands that add to the idyllic scenery. It is an excellent spot for both nature lovers and adventure seekers.
+		<br>
+		<br>
+		Nearby attractions include the 4 Islands Tour, Las Cabanas Beach with its zipline adventure, the hidden Secret Beach, Shimizu Island for snorkeling, and the serene Calitang Beach. These nearby destinations make Nacpan Beach an ideal base for exploring the natural wonders of El Nido.</p>
+	</div>
+	
+	<div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>
