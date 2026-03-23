@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabon Cave</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                background-color: #547792;
+                font-family: "Aeogo Pxltd Next";
+                border: 5px groove #EAE0CF;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                font-size: 20px;
+            }
+            .logoname {
+                margin-right: auto;
+                font-family: "Berlin Sans FB";
+                font-size: 20px;
+                color: white;
+                padding: 14px 16px;
+            }
+            li {
+                list-style: none;
+            }
+
+            li a {
+                display: block;
+                color: black;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #213448;
+                color: white;
+            }
+
+            .active {
+                background-color: #213448;
+                color: white;
+            }
+            .intro {
+                height: 500px;
+                background-image: url('bgimage.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                }
+            h1.Title{
+                margin-top: 50px;
+                margin-bottom: 50px;
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 40px 40px 40px 40px;
+                border-radius: 15px;
+                max-width: 600px;
+                font-family: "Berlin Sans FB";
+                position: relative;
+                z-index: 1;
+                font-size: 48px;
+                color: #547792;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+          
+            .content {
+
+                display: block;
+            }
+
+            img {
+                width: 400px;
+                height: 400px;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                float: right;
+                margin: 2px 50px 50px 50px;
+            }
+
+            img:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+			.designT {
+				font-family: "Berlin Sans FB";
+				font-size: 50px;
+				color: white;
+				margin: 15px 0;
+				text-shadow: 3px 2px black;
+			}
+			.conclusion {
+				font-family: "Berlin Sans FB";
+				font-size: 50px;
+				color: blaclk;
+				margin: 15px;
+				text-shadow: 3px 2px white;
+			}
+			.gallery {
+				background-color: #213448;
+				padding: 30px;
+				text-align: center;
+			}
+
+            .section {
+                background-color: #94B4C1;
+                padding: 30px;
+            }
+            .activity-section{
+                background-color: #547792;
+                padding: 30px;
+            }
+            .tips-section{
+                background-color: #94B4C1;
+                padding: 30px;
+            }
+            .expect-section{
+                background-color: #547792;
+                padding: 30px;
+            }
+
+            .activity-content {
+                text-align: center;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                align-items: start;
+            }
+
+            .activity-item {
+                text-align: center;
+                padding: 15px;
+            }
+
+            .activity-content img {
+                display: block;
+                width: 100%;
+                height: 250px;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                margin: 0 auto 15px auto;
+            }
+
+            .activity-content img:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .activity-content p {
+                text-align: center;
+                color: #EAE0CF;
+                max-width: 600px;
+                margin: 0 auto;
+                font-family: 'arial';
+                font-size: 22px;
+            }
+
+            .tips-content p {
+                font-family: 'arial';
+                font-size: 22px; 
+                text-align: justify;
+                margin-left: 15px;
+                color: #213448;
+            }
+
+            .expect-content {
+                text-align: center;
+            }
+
+            .expect-content img {
+                display: block;
+                width: 100%;
+                max-width: 600px;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                margin: 0 auto 30px auto;
+                float: none;
+                clear: both;
+            }
+
+            .expect-content img:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .expect-content p{
+                font-family: 'arial';
+                font-size: 22px; 
+                text-align: justify;
+                margin-left: 15px;
+                color: #EAE0CF;
+            }
+
+            p.first{
+                font-family: 'arial';
+                font-size: 22px; 
+                text-align: justify;
+                margin-left: 15px;
+                color: #213448;
+            }
+
+            
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   	
+            }
+        </style>
+    </head>
+    <body>
+        <div class="intro">
+            <div class="intro-contents">
+                <h1 class="Title">TABON CAVE</h1>
+            </div>
+        </div>
+        <ul>
+            <li class="logoname"><b>PALAWAN BLOG</b></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+    <li><a class="active">Tabon Cave</a></li>
+        </ul>
+        <div class="section">
+            <div class="content">
+                <img class="clickable" src="TABONCAVE.jpg" alt="Tabon Cave" align="center">
+                    <h1 class="Title">ABOUT TABON CAVE</h1>
+                    <p class="first">
+                        The Tabon Caves, located in Quezon, Palawan, are one of the most important 
+                        archaeological sites in the Philippines and are often called the “Cradle of Philippine 
+                        Civilization.” This cave complex gained national and historical significance after the 
+                        discovery of the Tabon Man fossils, which are among the oldest known human remains in the 
+                        country. Found within a protected area known as Lipuun Point, the site is surrounded by 
+                        limestone cliffs, coastal forests, and scenic views of the sea. The caves served as shelters 
+                        for early humans thousands of years ago, and archaeologists have uncovered tools, pottery, 
+                        and burial artifacts that provide valuable insights into prehistoric life in the Philippines.
+                        <br><br>
+                        Today, visitors to Tabon Caves can explore selected caves through 
+                        guided tours that explain the site’s cultural and historical importance. 
+                        The experience combines both education and adventure, as reaching the caves 
+                        may involve a short trek and boat ride. Inside, visitors will find cool, quiet 
+                        chambers with natural rock formations, offering a glimpse into how early inhabitants 
+                        once lived. Beyond its historical value, the peaceful surroundings and natural beauty 
+                        of the area make it a unique destination for travelers who want to learn about the country’s 
+                        past while enjoying a calm and scenic environment.
+                    </p>
+            </div>
+        </div>
+        <div class="activity-section">
+            <h1 class="Title">ACTIVITIES AND ATTRACTIONS</h1>
+            <div class="activity-content">
+                <div class="activity-item">
+                    <img class="clickable" src="TOUR.jpg" alt="Tabon Cave">
+                    <p><u><strong>Cave Exploration Tours</strong></u><br>
+                        Visitors can explore selected caves within the complex through guided tours. These tours provide 
+                        insights into the structure of the caves and their historical significance.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="SITE.jpg" alt="Tabon Cave">
+                    <p><u><strong>Tabon Man Archaeological Site Viewing</strong></u><br>
+                        One of the main highlights is the area where the Tabon Man fossils were discovered. 
+                        It gives visitors a deeper understanding of early human life in the Philippines.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="ARTI.jpg" alt="Artifacts">
+                    <p><u><strong>Artifact and Burial Jar Observation</strong></u><br>
+                        Inside some caves, you can learn about ancient burial practices and see 
+                        replicas or preserved areas where artifacts like pottery and burial jars were found.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="GUIDE.jpg" alt="Tabon Cave">
+                    <p><u><strong>Guided Historical Tours</strong></u><br>
+                        Local guides explain the importance of the caves, including archaeological
+                        discoveries and how early humans used the area as shelter.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="FORMATION.jpg" alt="Tabon Cave">
+                    <p><u><strong>Rock Formation Viewing</strong></u><br>
+                        The caves feature natural limestone formations such as stalactites and stalagmites, 
+                        showcasing the geological beauty of the site.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="TREK.jpg" alt="Tabon Cave">
+                    <p><u><strong>Nature Trekking Around the Cave Area</strong></u><br>
+                        Available in some islands, 
+                        Visitors usually take a short trek through forested paths within the protected area, 
+                        allowing them to enjoy the natural surroundings and coastal landscape.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="SCE.JPG" alt="Tabon Cave">
+                    <p><u><strong>Scenic Coastal Viewing Points</strong></u><br>
+                        The caves are located near cliffs overlooking the sea, 
+                        offering beautiful views of the coastline and nearby waters.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="PHOTOG.jpg" alt="Tabon Cave">
+                    <p><u><strong>Photography and Cultural Appreciation</strong></u><br>
+                        The combination of historical significance and natural scenery makes 
+                        Tabon Caves a great place for photography and learning about Filipino heritage.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tips-section">
+            <div class="tips-content">
+                <h1 class="Title">TRAVEL TIPS</h1>
+                 <p><strong>Wear Comfortable Clothing and Footwear - </strong>
+                    Since visiting Tabon Caves may involve walking, light trekking, and climbing steps, 
+                    it is best to wear comfortable clothes and sturdy footwear like rubber shoes. 
+                    This will help you move easily and safely around the area.
+                    <br><br>
+                    <strong>Prepare for a Short Trek and Boat Ride - </strong>
+                    Accessing the caves usually includes a short boat trip followed by 
+                    a walk through forested paths. Be prepared for this combination of travel and 
+                    bring only the essentials to make your journey more convenient.
+                    <br><br>
+                    <strong>Follow Your Guide at All Times - </strong>
+                    Guided tours are important in Tabon Caves because they provide 
+                    historical context and ensure visitor safety. Always stay with your group and l
+                    isten carefully to instructions, especially inside the caves.
+                    <br><br>
+                    <strong>Respect the Historical Site - </strong>
+                    Tabon Caves is a protected archaeological area, so avoid touching 
+                    rock formations, artifacts, or restricted zones. Preserving the site helps 
+                    maintain its value for future generations.
+                    <br><br>
+                    <strong>Bring Water and Stay Hydrated - </strong>
+                    The weather in Palawan can be hot and humid, especially during outdoor 
+                    walks. Bring enough drinking water to stay hydrated throughout your visit.
+                    <br><br>
+                    <strong>Use Proper Lighting if Needed - </strong>
+                    Some cave areas may have limited lighting. While guides usually provide 
+                    assistance, bringing a small flashlight can help you see more clearly 
+                    inside darker sections.
+                    <br><br>
+                    <strong>Apply Insect Repellent - </strong>
+                    Since the area is surrounded by forest and natural vegetation, 
+                    it is recommended to use insect repellent to avoid mosquito bites during your visit.
+                    <br><br>
+                    <strong>Avoid Littering and Practice Clean Travel - </strong>
+                    Always bring your trash with you and dispose of it properly. 
+                    Keeping the area clean helps protect both the environment and the historical site.
+                    <br><br>
+                    <strong>Check Weather Conditions Before Visiting - </strong>
+                    Weather can affect travel conditions, especially boat access. 
+                    Make sure to check forecasts ahead of time to ensure a smooth and safe trip.
+                    <br><br>
+                    <strong>Take Your Time and Appreciate the Experience - </strong>
+                    Tabon Caves is not just a tourist spot but a place of historical 
+                    importance. Take your time to observe, learn, and appreciate the cultural and 
+                    natural significance of the area.</p>
+            </div>
+        </div>
+        <div class="expect-section">
+            <h1 class="Title">WHAT TO EXPECT</h1>
+            <div class="expect-content">
+                <img class="clickable" src="EXPECTABON.jpg" alt="Tabon Caves Experience">
+                <p>A visit to Tabon Caves offers a unique experience that combines history, culture, 
+                    and nature in one destination. Unlike beach or island attractions,
+                    Tabon Caves provides a more educational and exploratory journey, 
+                    allowing visitors to step back in time and learn about the early inhabitants 
+                    of the Philippines. As you arrive at the site, you can expect a peaceful and 
+                    natural environment surrounded by limestone cliffs, forested areas, and coastal views. 
+                    The atmosphere is calm and quiet, making it an ideal place for those who enjoy both learning 
+                    and appreciating nature.
+                    <br><br>
+                    One of the main highlights of the visit is the guided cave exploration. 
+                    Visitors are taken to selected caves within the complex, where they can 
+                    see the actual locations of important archaeological discoveries, including 
+                    the area where the Tabon Man fossils were found. Inside the caves, you will 
+                    notice cool temperatures, dim lighting, and impressive rock formations such 
+                    as stalactites and stalagmites. Guides provide detailed explanations about 
+                    how early humans once used these caves as shelters, as well as the significance 
+                    of the artifacts discovered in the area.
+                    <br><br>
+                    You can also expect a bit of adventure as part of the experience. 
+                    Reaching the caves may involve a short boat ride followed by a walk 
+                    or light trek through natural paths. This adds an element of 
+                    exploration to your visit and allows you to fully experience the 
+                    natural surroundings of the protected area. Along the way, you may 
+                    encounter scenic viewpoints overlooking the sea, giving you opportunities 
+                    to enjoy the landscape and take photos.
+                    <br><br>
+                    In addition to its historical importance, 
+                    Tabon Caves offers a quiet and reflective environment. 
+                    There are no large crowds or commercialized facilities, so the 
+                    focus remains on learning and appreciating the site. Visitors are 
+                    encouraged to move at a relaxed pace, listen to the guide, and take 
+                    in the cultural significance of the place. Overall, a trip to Tabon 
+                    Caves is a meaningful experience that blends education, light adventure, 
+                    and natural beauty, making it perfect for those who want to explore a 
+                    different side of Palawan beyond its beaches.
+                    
+                </p>
+            </div>
+        </div>
+
+<div class="gallery">
+    <p class="designT" style = "float: left;">LOCATION OF TABON CAVE:</p><br><br><br><br>
+	<p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;"
+	>-- Tabon Cave is located in Quezon Municipality, southern Palawan, Philippines, along the Lipuun River in the Gubat-Kulapnitan area. It is part of the Tabon Caves Complex, which sits on a limestone cliff overlooking the river, about 150 kilometers south of Puerto Princesa City.
+<BR><BR>
+-- The caves are famous for being the site of the oldest human remains in the Philippines, often called the “Cradle of Philippine Civilization.” Visitors access the main cave via a short trek along forested paths and wooden walkways, making it an important archaeological and tourist site in Palawan.
+	</div>
+	<div style="background-color: #EAE0CF; padding: 30px;">
+	<p class="conclusion">CONCLUSION</p>
+	<p style="font-size: 20px; text-align: justify; margin: 20px 150px; color:black; line-height: 1.5;">
+    The Tabon Caves offers a unique glimpse into the early history of the Philippines, earning its title as the “Cradle of Philippine Civilization.” With its rich archaeological significance, visitors can explore caves that sheltered ancient humans, see fossil sites like the Tabon Man, and learn about early tools, pottery, and burial practices. The combination of history, culture, and natural scenery makes Tabon Caves a one-of-a-kind destination in southern Palawan.
+	<br><br>
+	Beyond its educational value, Tabon Caves also provides a peaceful and scenic escape. The limestone cliffs, coastal forests, and tranquil river views create an environment perfect for reflection and photography. By visiting responsibly and following guided tours, travelers not only enjoy a meaningful adventure but also contribute to the preservation of one of the Philippines’ most important cultural and historical treasures.</div>
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>

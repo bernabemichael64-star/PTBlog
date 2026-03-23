@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Honda Bay</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                background-color: #547792;
+                font-family: "Aeogo Pxltd Next";
+                border: 5px groove #EAE0CF;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                font-size: 20px;
+            }
+            .logoname {
+                margin-right: auto;
+                font-family: "Berlin Sans FB";
+                font-size: 20px;
+                color: white;
+                padding: 14px 16px;
+            }
+            li {
+                list-style: none;
+            }
+
+            li a {
+                display: block;
+                color: black;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #213448;
+                color: white;
+            }
+
+            .active {
+                background-color: #213448;
+                color: white;
+            }
+            .intro {
+                height: 500px;
+                background-image: url('bgimage.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                }
+            h1.Title{
+                margin-top: 50px;
+                margin-bottom: 50px;
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 40px 40px 40px 40px;
+                border-radius: 15px;
+                max-width: 600px;
+                font-family: "Berlin Sans FB";
+                position: relative;
+                z-index: 1;
+                font-size: 48px;
+                color: #547792;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+          
+            .content {
+
+                display: block;
+            }
+
+            img {
+                width: 400px;
+                height: 400px;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                float: right;
+                margin: 2px 50px 50px 50px;
+            }
+
+            img:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+			.designT {
+				font-family: "Berlin Sans FB";
+				font-size: 50px;
+				color: white;
+				margin: 15px 0;
+				text-shadow: 3px 2px black;
+			}
+			.conclusion {
+				font-family: "Berlin Sans FB";
+				font-size: 50px;
+				color: blaclk;
+				margin: 15px;
+				text-shadow: 3px 2px white;
+			}
+			.gallery {
+				background-color: #213448;
+				padding: 30px;
+				text-align: center;
+			}
+            .section {
+                background-color: #94B4C1;
+                padding: 30px;
+            }
+            .activity-section{
+                background-color: #547792;
+                padding: 30px;
+            }
+            .tips-section{
+                background-color: #94B4C1;
+                padding: 30px;
+            }
+            .expect-section{
+                background-color: #547792;
+                padding: 30px;
+            }
+
+            .activity-content {
+                text-align: center;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                align-items: start;
+            }
+
+            .activity-item {
+                text-align: center;
+                padding: 15px;
+            }
+
+            .activity-content img {
+                display: block;
+                width: 100%;
+                height: 250px;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                margin: 0 auto 15px auto;
+            }
+
+            .activity-content img:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .activity-content p {
+                text-align: center;
+                color: #EAE0CF;
+                max-width: 600px;
+                margin: 0 auto;
+                font-family: 'arial';
+                font-size: 22px;
+            }
+
+            .tips-content p {
+                font-family: 'arial';
+                font-size: 22px; 
+                text-align: justify;
+                margin-left: 15px;
+                color: #213448;
+            }
+
+            .expect-content {
+                text-align: center;
+            }
+
+            .expect-content img {
+                display: block;
+                width: 100%;
+                max-width: 600px;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                margin: 0 auto 30px auto;
+                float: none;
+                clear: both;
+            }
+
+            .expect-content img:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .expect-content p{
+                font-family: 'arial';
+                font-size: 22px; 
+                text-align: justify;
+                margin-left: 15px;
+                color: #EAE0CF;
+            }
+
+            p.first{
+                font-family: 'arial';
+                font-size: 22px; 
+                text-align: justify;
+                margin-left: 15px;
+                color: #213448;
+            }
+            
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   	
+            }
+        </style>
+    </head>
+    <body>
+        <div class="intro">
+            <div class="intro-contents">
+                <h1 class="Title">HONDA BAY</h1>
+            </div>
+        </div>
+        <ul>
+            <li class="logoname"><b>PALAWAN BLOG</b></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+    <li><a class="active">Honda Bay</a></li>
+        </ul>
+        <div class="section">
+            <div class="content">
+                <img class="clickable" src="HONDABAY.png" alt="Honda Bay" align="center">
+                    <h1 class="Title">ABOUT HONDA BAY</h1>
+                    <p class="first">
+                        Honda Bay, located in Puerto Princesa City, Palawan, 
+                        is one of the most popular tourist destinations in the Philippines, 
+                        known for its crystal-clear waters, white sand beaches, and vibrant marine biodiversity. 
+                        Situated along the eastern shore of Puerto Princesa, 
+                        the bay serves as a gateway to several stunning islands such as Starfish Island, 
+                        Cowrie Island, and Luli Island, each offering unique experiences for visitors. 
+                        Tourists can enjoy a variety of activities including island hopping, snorkeling, swimming, 
+                        and simply relaxing by the beach while appreciating the natural beauty of the surroundings. 
+                        The area is rich in coral reefs and marine life, making it an excellent spot for underwater exploration.
+                        <br><br>
+                        Honda Bay plays an important role in the local tourism industry, 
+                        contributing to the livelihood of many residents through eco-tourism and sustainable practices. 
+                        The calm and shallow waters make it accessible and safe for visitors of all ages, 
+                        while the scenic views provide a peaceful escape from busy city life. With its combination of natural beauty, 
+                        recreational opportunities, and cultural significance, 
+                        Honda Bay continues to be a must-visit destination for both local and 
+                        international travelers seeking relaxation and adventure in Palawan.
+                    </p>
+            </div>
+        </div>
+        <div class="activity-section">
+            <h1 class="Title">ACTIVITIES AND ATTRACTIONS</h1>
+            <div class="activity-content">
+                <div class="activity-item">
+                    <img class="clickable" src="STARFISH.jpg" alt="Starfish Island">
+                    <p><u><strong>Starfish Island</strong></u><br>
+                        A small, tranquil island famous for its shallow waters and abundant starfish. 
+                        Ideal for snorkeling, swimming, and relaxing on soft white sand.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="COWRIE.jpg" alt="Cowrie Island">
+                    <p><u><strong>Cowrie Island</strong></u><br>
+                        Known for its calm beaches and excellent snorkeling spots. 
+                        Visitors can enjoy sunbathing, swimming, and exploring vibrant coral reefs.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="LULI.jpg" alt="Luli Island">
+                    <p><u><strong>Luli Island</strong></u><br>
+                        Unique for its sandbar that appears and disappears with the tide. 
+                        Perfect for sunbathing, swimming, and taking scenic photos.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="ISLANDHOP.jpg" alt="Honda Bay">
+                    <p><u><strong>Island-Hopping Tours</strong></u><br>
+                        The main activity in Honda Bay, where visitors travel by boat from one island to another. 
+                        It offers a mix of adventure and relaxation in a single trip.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="SNORKELING.jpg" alt="Honda Bay">
+                    <p><u><strong>Snorkeling and Marine Exploration</strong></u><br>
+                        Honda Bay is rich in marine biodiversity, allowing visitors to explore colorful coral reefs and a variety of tropical fish. 
+                        Snorkeling is one of the main highlights of any tour.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="KAYAK.jpg" alt="Honda Bay">
+                    <p><u><strong>Kayaking and Paddleboarding</strong></u><br>
+                        Available in some islands, 
+                        these activities allow visitors to explore the waters at their own pace while enjoying the scenic coastal views.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="DINING.jpg" alt="Honda Bay">
+                    <p><u><strong>Beach Picnics and Fresh Seafood Dining</strong></u><br>
+                        Many tours include stops where visitors can enjoy freshly prepared seafood meals on the islands, 
+                        offering a delicious and authentic local experience.</p>
+                </div>
+                <div class="activity-item">
+                    <img class="clickable" src="PIC.jpg" alt="Honda Bay">
+                    <p><u><strong>Photography and Sightseeing</strong></u><br>
+                        With its turquoise waters, white sand, and tropical scenery, Honda Bay provides excellent opportunities for photography, 
+                        especially during sunrise and sunset.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tips-section">
+            <div class="tips-content">
+                <h1 class="Title">TRAVEL TIPS</h1>
+                 <p><strong>Plan Your Island-Hopping Route - </strong>
+                    Since Honda Bay has multiple islands like Starfish, Cowrie, and Luli, it’s best to plan your stops in advance. Some islands are better for snorkeling, while others are ideal for relaxing. Planning your route helps you maximize your time and avoid feeling rushed during the tour.
+                    <br><br>
+                    <strong>Time Your Visit Based on the Tide - </strong>
+                    Certain areas in Honda Bay, especially sandbars like Luli Island, are affected by the tide. Visiting during low tide allows you to fully enjoy the sandbars, while high tide is better for swimming. Knowing the tide schedule can improve your overall experience.
+                    <br><br>
+                    <strong>Be Careful When Snorkeling - </strong>
+                    While snorkeling is a highlight in Honda Bay, always be mindful of where you step or swim. Avoid touching corals or disturbing marine life, as they are fragile and important to the ecosystem. Wearing a life vest can also help if you are not a strong swimmer.
+                    <br><br>
+                    <strong>Secure Your Belongings on the Boat - </strong>
+                    During transfers between islands, waves and movement can cause your belongings to shift or get wet. Keep your items in one secure place, preferably inside a waterproof bag, to prevent damage or loss while traveling around the bay.
+                    <br><br>
+                    <strong>Follow Boat Safety Guidelines - </strong>
+                    Always listen to your boat guide and follow safety instructions. Wear your life vest properly, especially during travel between islands. This ensures a safe and enjoyable island-hopping experience within Honda Bay.
+                    <br><br>
+                    <strong>Respect Island Rules and Limits - </strong>
+                    Each island in Honda Bay may have its own guidelines, such as designated swimming areas or restricted zones. Follow these rules to protect both yourself and the environment, and to help maintain the islands’ natural beauty.
+                    <br><br>
+                    <strong>Manage Your Time on Each Island - </strong>
+                    Island-hopping tours usually have limited time per stop. Be mindful of the schedule so you can enjoy activities like swimming, snorkeling, and relaxing without missing the boat departure.
+                    <br><br>
+                    <strong>Bring Essentials for Island Activities -</strong>
+                    Since you will spend most of your time on the islands, bring essentials like towels, extra clothes, and small personal items you may need. Having everything ready allows you to move easily between activities.
+                    <br><br>
+                    <strong>Stay Aware of Changing Conditions - </strong>
+                    Water conditions in Honda Bay can change throughout the day. Stay alert while swimming or snorkeling, and always remain within safe areas recommended by your guide.
+                    <br><br>
+                    <strong>Enjoy and Take Your Time - </strong>
+                    While it’s exciting to visit multiple islands, don’t rush too much. Take time to enjoy the scenery, relax on the beach, and appreciate the natural beauty that Honda Bay offers.</p>
+            </div>
+        </div>
+        <div class="expect-section">
+            <h1 class="Title">WHAT TO EXPECT</h1>
+            <div class="expect-content">
+                <img class="clickable" src="EXPECT.jpg" alt="Honda Bay Experience">
+                <p>A visit to Honda Bay offers a complete tropical island experience filled with scenic beauty, 
+                    relaxing moments, and exciting water activities. As one of the top attractions in Palawan, 
+                    Honda Bay is best known for its island-hopping tours, where visitors travel by boat to several small islands, 
+                    each offering its own unique atmosphere and activities. From the moment your tour begins, you can expect breathtaking 
+                    views of turquoise waters, clear skies, and lush island landscapes that create a peaceful and refreshing environment.
+                    <br><br>
+                    One of the main highlights of Honda Bay is its island-hopping adventure. 
+                    Visitors are typically taken to popular islands such as Starfish Island, 
+                    Cowrie Island, and Luli Island. Each stop provides a different experience—some 
+                    islands are perfect for snorkeling and marine exploration, while others are ideal 
+                    for relaxing on white sand beaches or enjoying local food. The boat rides between 
+                    islands are also part of the experience, offering scenic views of the coastline and open sea.
+                    <br><br>
+                    Snorkeling is another key activity you can expect in Honda Bay. 
+                    The area is home to vibrant coral reefs and a variety of tropical fish, 
+                    making it an excellent spot for underwater exploration. Even beginners 
+                    can enjoy snorkeling due to the generally calm and shallow waters. 
+                    Many tours provide or offer rentals for snorkeling gear, allowing visitors 
+                    to fully experience the rich marine biodiversity of the bay.
+                    <br><br>
+                    For those looking to relax, Honda Bay offers plenty of opportunities to unwind. 
+                    You can spend time sunbathing on soft sandy beaches, swimming in warm and clear waters, 
+                    or simply enjoying the peaceful surroundings. Some islands have cottages and shaded areas 
+                    where visitors can rest, eat, and take in the beautiful views. The laid-back atmosphere makes 
+                    it an ideal destination for families, couples, and groups of friends.
+                    <br><br>
+                    Food is also part of the Honda Bay experience. 
+                    Many tours include lunch, often featuring freshly prepared seafood and local dishes. 
+                    Visitors may also find small vendors on certain islands offering snacks, drinks, 
+                    and simple meals. Dining by the beach while surrounded by nature adds to the overall enjoyment of the trip.
+                    <br><br>
+                    Throughout the tour, you can also expect a strong connection with nature. 
+                    Honda Bay is known for its clean environment and well-preserved marine life, 
+                    so visitors are encouraged to follow eco-friendly practices. You may see starfish 
+                    in shallow waters, colorful fish while snorkeling, and beautiful coastal scenery that reflects the natural charm of Palawan.
+                    <br><br>
+                    Overall, a trip to Honda Bay is a balance of adventure and relaxation. 
+                    Whether you are exploring underwater life, hopping between islands, enjoying local food, 
+                    or simply taking in the views, the experience offers something for every type of traveler. 
+                    It is a destination where you can slow down, enjoy nature, and create memorable moments 
+                    in one of the most beautiful coastal areas in the Philippines.
+                </p>
+            </div>
+        </div>
+
+<div class="gallery">
+    <p class="designT" style = "float: left;">LOCATION OF HONDA BAY:</p><br><br><br><br>
+	<p style="font-size: 20px; text-align: justify; margin-right: 150px; margin-left: 150px; color:#EAE0CF; line-height: 1.2;"
+	>-- Honda Bay is located on the eastern coast of Puerto Princesa City, along the Sulu Sea. The bay is just a short drive from the city proper, making it highly accessible for day trips and tourist activities.
+		<br><br>
+		-- Honda Bay is famous for its island-hopping tours, crystal-clear waters, and vibrant marine life. Visitors can explore several islands such as Starfish Island, Cowrie Island, and Luli Island, enjoying activities like snorkeling, swimming, kayaking, and beach picnics. Its calm waters, scenic beaches, and rich biodiversity make Honda Bay a top destination for both relaxation and adventure in Palawan.
+</div>
+	<div style="background-color: #EAE0CF; padding: 30px;">
+	<p class="conclusion">CONCLUSION</p>
+	<p style="font-size: 20px; text-align: justify; margin: 20px 150px; color:black; line-height: 1.5;">
+       Honda Bay stands out as one of the most beautiful and accessible island destinations in Palawan, offering a perfect mix of relaxation, adventure, and natural beauty. From its crystal-clear waters and white sand beaches to its vibrant marine life, the bay provides an unforgettable experience for travelers of all kinds. Whether you are snorkeling among coral reefs, enjoying island-hopping tours, or simply relaxing by the shore, Honda Bay showcases the rich coastal charm of the Philippines.
+		<br><br>
+		Beyond its scenic appeal, Honda Bay also highlights the importance of eco-tourism and responsible travel. Together with destinations like Tubbataha Reefs Natural Park, it reflects the country’s commitment to preserving marine ecosystems while promoting tourism. Visiting these places not only offers memorable experiences but also encourages awareness and appreciation of nature, making every trip both enjoyable and meaningful.Nearby attractions include the 4 Islands Tour, Las Cabanas Beach with its zipline adventure, the hidden Secret Beach, Shimizu Island for snorkeling, and the serene Calitang Beach. These nearby destinations make Nacpan Beach an ideal base for exploring the natural wonders of El Nido.</p>
+	</div>
+        
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>
