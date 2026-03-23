@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us Page</title>
+<style>
+body {
+    margin: 0;
+    background: url(palawan.jpg) no-repeat center top;
+    background-size: 1400px 550px;
+    background-attachment: fixed;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #547792;
+    font-family: "Aeogo Pxltd Next";
+    border: 5px groove #EAE0CF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+.logoname {
+    margin-right: auto;
+    font-family: "Berlin Sans FB";
+    font-size: 20px;
+    color: white;
+    padding: 14px 16px;
+}
+li {
+    list-style: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #213448;
+    color: white;
+}
+
+.active {
+    background-color: #213448;
+    color: white;
+}
+.dess {
+    text-align: center;
+    font-size: 80px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    margin: 150px 0;
+	box-shadow: 5px 5px 5px 5px white;
+	text-shadow: 3px 2px black;
+}
+.section {
+    background-color: #94B4C1;
+    padding: 30px;
+}
+.designT {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: white;
+    margin: 15px;
+	text-shadow: 3px 2px black;
+}
+.conclusion {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: blaclk;
+    margin: 15px;
+	text-shadow: 3px 2px white;
+}
+.act {
+    font-family: "Berlin Sans FB";
+    font-size: 30px;
+    color: white;
+	margin-right: 100px;
+	margin-top: 50px;
+}
+.content {
+    overflow: hidden;
+}
+.content img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    float: right;
+    margin: 50px;
+	margin-top: 90px;
+	margin-right: 70px;
+	box-shadow: 0 5px 10px 10px white;	
+	-webkit-transition-duration: 0.8s; 
+	transition-duration: 0.8s;
+    opacity: 1.0;
+    filter: alpha(opacity=100);	
+}
+.sec {
+    overflow: hidden;
+}
+
+.sec img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    float: left;
+    margin: 20px 70px 20px 20px; 
+	margin-top: 100px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+	}
+.gallery {
+    background-color: #547792;
+    padding: 30px;
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 230px;
+    border-radius: 10%;
+    float: right;
+    margin: 20px 70px 20px 20px; 
+	box-shadow: 0 5px 10px 10px red;	
+}
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }<!DOCTYPE html>
+<html>
+<head>
+<title>About Us Page</title>
+<style>
+body {
+    margin: 0;
+    background: url(palawan.jpg) no-repeat center top;
+    background-size: 1400px 550px;
+    background-attachment: fixed;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #547792;
+    font-family: "Aeogo Pxltd Next";
+    border: 5px groove #EAE0CF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+.logoname {
+    margin-right: auto;
+    font-family: "Berlin Sans FB";
+    font-size: 20px;
+    color: white;
+    padding: 14px 16px;
+}
+li {
+    list-style: none;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #213448;
+    color: white;
+}
+
+.active {
+    background-color: #213448;
+    color: white;
+}
+.dess {
+    text-align: center;
+    font-size: 80px;
+    font-family: "Berlin Sans FB";
+    color: white;
+    margin: 150px 0;
+	box-shadow: 5px 5px 5px 5px white;
+	text-shadow: 3px 2px black;
+}
+.section {
+    background-color: #94B4C1;
+    padding: 30px;
+}
+.designT {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: white;
+    margin: 15px;
+	text-shadow: 3px 2px black;
+}
+.conclusion {
+    font-family: "Berlin Sans FB";
+    font-size: 50px;
+    color: blaclk;
+    margin: 15px;
+	text-shadow: 3px 2px white;
+}
+.act {
+    font-family: "Berlin Sans FB";
+    font-size: 30px;
+    color: white;
+	margin-right: 100px;
+	margin-top: 50px;
+}
+.content {
+    overflow: hidden;
+}
+.content img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    float: right;
+    margin: 50px;
+	margin-top: 90px;
+	margin-right: 70px;
+	box-shadow: 0 5px 10px 10px white;	
+	-webkit-transition-duration: 0.8s; 
+	transition-duration: 0.8s;
+    opacity: 1.0;
+    filter: alpha(opacity=100);	
+}
+.sec {
+    overflow: hidden;
+}
+
+.sec img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    float: left;
+    margin: 20px 70px 20px 20px; 
+	margin-top: 100px;
+	margin-bottom: 50px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+	}
+.gallery {
+    background-color: #547792;
+    padding: 30px;
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 230px;
+    border-radius: 10%;
+    float: right;
+    margin: 20px 70px 20px 20px; 
+	box-shadow: 0 5px 10px 10px red;	
+}
+.modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 2001;
+            }
+
+            .close:hover {
+                color: #bbb;
+            }
+
+            img.clickable {
+                cursor: pointer;
+            }
+
+            img.clickable:hover {
+                opacity: 0.5;
+				box-shadow: 0 5px 10px 10px black;   	
+            }
+</style>
+</head>
+
+<body>
+<h1 class="dess">ABOUT US</h1>
+<ul>
+    <li class="logoname"><b>PALAWAN BLOG</b></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a class = "active" href="about.html">About</a></li>
+    <li><a href="destination.html">Destination</a></li>
+</ul>
+<div class="section">
+    <div class="content">
+        <img class="clickable" src="LOGGO.jpg">
+        <p class="designT">ABOUT PALAWAN TRAVEL BLOG</p>
+
+        <p style="font-size: 20px; text-align: justify; margin-left: 15px;">
+    Welcome to our Palawan Travel Blog! Discover the beauty, culture, and unforgettable adventures waiting in Palawan—widely known as one of the most stunning destinations in the Philippines. From pristine beaches and towering limestone cliffs to crystal-clear waters, Palawan is truly a tropical paradise.
+	<br><br>
+	Our mission is to inspire and guide travelers as they explore must-visit destinations like El Nido, Coron, and Puerto Princesa. We also aim to provide travelers with clear and helpful information about the destinations they want to visit—from top attractions and activities to travel tips and local insights. Through captivating photos, engaging travel stories, and practical guides, we hope to give you a complete preview of Palawan’s magic—even before your journey begins.
+	</p>
+    </div>
+</div>
+</div>
+<div style="background-color: #213448; padding: 30px;">
+
+    <p class="designT" style = "text-align: center;">OUR TEAM</p>
+
+    <div class="sec">
+        <img class="clickable" src="human1.jpg">
+        <p class="act">1. BERNABE, MICHAEL C.</p>
+
+        <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+            Good day, I’m Michael C. Bernabe, a student at Arellano University – Andres Bonifacio Campus, currently taking up Bachelor of Science in Information Technology as a 1st-year college student. I am of legal age. My dream is to become a web and graphic designer someday.
+		<br>
+		I am the lead designer of this website, and our goal is to provide travelers with clear, accurate, and helpful information about the destinations they want to visit in Palawan. We aim to guide and inspire people who are planning to explore this beautiful place.
+		<br>
+		Lastly, we hope to promote and share how wonderful Palawan is, showcasing its natural beauty and helping more people discover what it has to offer here in the Philippines.</p>
+		</p><br><br>
+        <img class="clickable" src="human2.jpg">
+        <p class="act">2. Agustin, Chiara Minh S.</p>
+
+        <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+           My name is Chiara Minh S. Agustin, and I am a BSIT student currently schooling at Arellano University. I am a slow learner, but I do try to keep up with web design lessons, as I actually have an interest in designing but haven't quite gotten too good at doing that yet. I did the Honda Bay and Tabon Cave webpages that showcase images, tips, and activities to persuade readers to want to go to these beautiful locations that are located in Palawan. My hobbies are reading, drawing, and playing games.</p>
+		</p>
+		<br><br><br><br><br><br>	
+		<img class="clickable" src="sison.jpg">
+        <p class="act">3. SISON, JAY LAWRENCE E.</p>
+
+        <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+          My name is Jay Lawrence Sison, and I’m a 20 years-old student from Arellano University. My dream is to become an IT professional, and I’m passionate about technology and how it can make a positive impact. My goal for this website is to provide people with valuable information about Palawan, so they can appreciate its beauty and unique attractions. By sharing insights and tips, I hope to inspire others to visit this incredible destination and experience its breathtaking landscapes, rich culture, and unforgettable adventures. I'm excited to contribute by creating content that helps people discover the best of Palawan.<br><br>	
+		</p>
+		<img class="clickable" src="ordas.jpg">
+        <p class="act">4. ORDAS, KEN REYVEN S.</p>
+
+        <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+            ‎My name is Ken Reyven Ordas, an 18 year old student from Arellano University. My dream is to become a successful person in life and in my chosen career, building a future through hard work, dedication, and the skills I continue to develop along the way. 
+‎ 		<br>
+		For this website, my goal is to create an informative and visually appealing travel blog about Palawan that showcases the beauty of each destination, helping viewers discover and appreciate the best places the island has to offer. My part in this project covers two of the most breathtaking destinations in Palawan Hidden Beach in El Nido, a secret cove accessible only through a narrow limestone crevice, and Tubbataha Reefs Natural Park, a world class UNESCO marine sanctuary in the remote Sulu Sea. </p>
+		<br><br>	
+		</p>
+		<img class="clickable" src="buita.jpg" style = "margin-bottom: 100px;">
+        <p class="act">5. Buita, Riel Jan M.</p>
+        <p style="font-size: 20px; text-align: justify; margin: 0 150px; color:#EAE0CF; line-height: 1.5;">
+           Hello I'm Riel Jan Buita and im 19 years old. I currently studying at Arellano University Bonifacio Campus in Pasig. Our website aims to showcase the beauty and unique experiences offered by some of the most stunning beaches in Palawan, particularly those found in El Nido and Puerto Princesa. The goal of this platform is to inform, inspire, and guide travelers by providing engaging, accurate, and visually appealing content about these destinations.
+		<br>
+		Through this website, we want to highlight not only the natural beauty of these beaches but also the activities, travel tips, and experiences that visitors can enjoy. My contribution to this website focuses on presenting detailed and engaging information about the overall web content and specifically highlighting two beautiful destinations such as Duli Beach in El Nido and Nagtabon Beach in Puerto Princesa. My goal was to make the content not only educational but also engaging enough to attract potential visitors and encourage them to explore these destinations.</p>
+		</div>
+		</div>
+	</div>
+	<div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>    
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImg");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('img.clickable');
+
+            images.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                });
+            });
+           
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            });
+        </script>
+</body>
+</html>	

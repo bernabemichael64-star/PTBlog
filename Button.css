@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+  margin-top: -10px;
+  width: 450px;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: center;
+  background-color: #213448;
+  font-family: "Aeogo Pxltd Next";
+  border: 10px groove #EAE0CF;
+}
+.button:hover{
+	color: white;
+	-webkit-transition-duration: 0.4s; 
+	transition-duration: 0.4s;
+	box-shadow: 0 5px 10px 10px white;	
+	background-color: #547792;
+}
